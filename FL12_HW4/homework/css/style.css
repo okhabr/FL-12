@@ -55,7 +55,7 @@ main {
 }
 
 .hero-wrap {
-    height: 108vh;
+    height: 100vh;
     background: #333 url("../img/home-bg.jpg") no-repeat center top;
     background-size: cover;
 }
