@@ -8,6 +8,11 @@
 ul {
     list-style-type: none;
 }
+.header {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+}
 
 .header-wrap {
     display: flex;
@@ -45,6 +50,9 @@ ul {
     color: #bfba55;
 }
 
+main {
+    padding-top: 72px;
+}
 
 .hero-wrap {
     height: 108vh;
