@@ -21,7 +21,6 @@ if (!a || !b || !c) {
       console.log(`x: ${x}`);
     } else {
       let D = b * b - four * a * c;
-      console.log(D);
       if (D >= 0) {
         let d = Math.sqrt(D);
         let x1 = Math.round((-b + d) / (two * a));
