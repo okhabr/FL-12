@@ -25,7 +25,6 @@ if(!STARTGAME){
                 //New Round
                 //Generate random pocket
                 randomPocket = Math.round(Math.random() * (maxPocketNumber - minPocketNumber) + minPocketNumber);
-                console.log(randomPocket);
                 //Update attempts
                 leftAttempts = maxAttempts;
                 //Update prize 2x
