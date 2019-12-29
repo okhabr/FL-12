@@ -9,7 +9,7 @@ if(!STARTGAME){
             //New game
             const minPocketNumber = 0;
             let maxPocketNumber = 8;
-            const DECREASEPOCKET = 4;
+            const INCEREASEPOCKET = 4;
             let totalUserAmount = 0;
             let maxPrize = 100;
             const INCREASEPRIZE = 2;
@@ -20,11 +20,13 @@ if(!STARTGAME){
             let maxAttempts = 3;
             let leftAttempts;
             let inputError;
+            let guessed = false;
             
             do {
                 //New Round
+                guessed = false;
                 //Generate random pocket
-                randomPocket = Math.round(Math.random() * (maxPocketNumber - minPocketNumber) + minPocketNumber);
+                randomPocket = Math.floor(Math.random() * (maxPocketNumber - minPocketNumber)) + minPocketNumber;
                 console.log(randomPocket);
                 //Update attempts
                 leftAttempts = maxAttempts;
@@ -46,10 +48,14 @@ Possible prize on current attempt: ${currentPrize}$`);
 Do you want to continue?`);
                         totalUserAmount += currentPrize;
                         maxPrize *= INCREASEPRIZE;
-                        maxPocketNumber += DECREASEPOCKET;
+                        maxPocketNumber += INCEREASEPOCKET;
+                        guessed = true;
                         break; 
                     }
                     leftAttempts--;
+                }
+                if(!leftAttempts && !guessed){
+                    totalUserAmount = 0;
                 }
         } while(newRound)
         alert(`Thank you for your participation. Your prize is: ${totalUserAmount}$`)
