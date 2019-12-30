@@ -26,12 +26,7 @@ if(!STARTGAME){
                 //New Round
                 guessed = false;
                 //Generate random pocket
-<<<<<<< HEAD
                 randomPocket = Math.floor(Math.random() * (maxPocketNumber - minPocketNumber)) + minPocketNumber;
-                console.log(randomPocket);
-=======
-                randomPocket = Math.round(Math.random() * (maxPocketNumber - minPocketNumber) + minPocketNumber);
->>>>>>> fa2ce0e6034880f754974ea0b77746eaf891f47f
                 //Update attempts
                 leftAttempts = maxAttempts;
                 //Update prize 2x
@@ -66,5 +61,3 @@ Do you want to continue?`);
         playAgain = confirm(`Would you like to play again?`);
     } while(playAgain)
 }    
-
-
