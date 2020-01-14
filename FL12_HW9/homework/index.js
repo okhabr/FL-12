@@ -90,6 +90,10 @@ function getPastDay(date, daysPast) {
 }
 
 //Task 10
-function formatDate(date) {
-    return `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()} ${date.getHours()}:${date.getMinutes()}`
+function formatDate(d) {
+    let add0 = function(timeUnit){
+        const LIMIT = 10;
+        return timeUnit<LIMIT ? `0`+timeUnit : timeUnit;
+    }
+    return `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()} ${add0(d.getHours())}:${add0(d.getMinutes())}`;
 }
