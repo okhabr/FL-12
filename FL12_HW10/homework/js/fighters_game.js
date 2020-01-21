@@ -1,5 +1,4 @@
 function Fighter(obj) {
-
     const name = obj.name;
     const damage = obj.damage;
     const strength = obj.strength;
@@ -8,7 +7,6 @@ function Fighter(obj) {
     let wins = 0;
     let loses = 0;
     const totalHP = obj.hp;
-
     return {
         getName: function() {
             return name;
