@@ -1,0 +1,28 @@
+.folder > i {
+    color: rgba(238, 216, 15, 0.877);
+}
+
+.file > i {
+    color: rgba(228, 226, 214, 0.877);
+}
+
+.emptyChild {
+    font-style: italic;
+}
+
+.noDisplay {
+    display: none;
+}
+
+i {
+    vertical-align: bottom;
+}
+
+.folder:hover, .file:hover {
+    background-color: rgb(224, 224, 212);
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+}
