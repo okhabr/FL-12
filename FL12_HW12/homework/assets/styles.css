@@ -1,0 +1,85 @@
+/* General */
+#root {
+    max-width: 60%;
+    margin: 0 auto;
+    border: 2px solid rgba(5, 16, 116,.3);
+    border-radius: 8px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(5, 16, 116);
+}
+
+ul {
+    list-style: none;
+}
+button:hover {
+    cursor: pointer;
+}
+/* Main page */
+.main-container {
+    text-align: right;
+}
+
+.main-container ul {
+    text-align: left;
+}
+
+.edit, .remove, .add-new-set, .add-new-term, .save-changes, .save-modifications, .cancel {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+}
+
+.add-new-set {
+    background-color: rgb(5, 16, 116);
+    color: white;
+}
+
+.remove , .cancel {
+    background-color: rgb(235, 93, 88);
+    color: rgb(131, 4, 4);
+}
+
+.edit, .save-changes, .save-modifications {
+    background-color: rgb(101, 204, 152);
+    color: rgb(2, 102, 47);
+}
+
+/* Add new page */
+.sets-list li{
+    font-size: 1.2rem;
+}
+
+input {
+    padding: 10px;
+    margin: 10px;
+}
+.set-name {
+    width: 305px;
+}
+
+.delete-term {
+    background-color: white;
+    border: none;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 10px;
+}
+.term-name {
+    width:160px ;
+}
+.term-definition {
+    width: 500px;
+}
+
+
+
+.hidden {
+    display: none;
+}
