@@ -1,0 +1,71 @@
+@import "variables";
+
+//CSS default styles override
+.navbar-light {
+    .navbar-nav {
+        .nav-link {
+            padding: 1.1rem 1.3rem;   
+        }
+        .nav-link.active {
+            background-color: @blue;
+            color: #fff;
+        }
+    }
+}
+h1, h2 {
+    color: @blue;
+}
+h1 {
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+//Custom styles
+.navigation {
+    &__logo {
+        width: 40px;
+        margin-right: 0;
+        img {
+            width: 30px;
+        }
+    }
+    &__link {
+        font-weight: 600;
+    }
+}
+.related-classes__card {
+        font-size: 700;
+        &_cardio {
+            background-color: @red;
+        }
+        &_fitness {
+            background-color: @blue;
+        }
+        &_zumba {
+            background-color: @orange;
+        }
+        &_camp {
+            background-color: @green;
+        }
+        &-text {
+            padding: .3rem 0;
+        }
+}
+.yoga-class {
+    margin-top: 1.8rem;
+    &__description, &__benefits {
+        font-size: 1.05rem;
+        line-height: 1.4;
+    }
+}
+.footer {
+    &__text {
+        font-size: 1.1rem;
+        font-weight: 500;
+        padding: .7rem 1rem;
+    }
+}
