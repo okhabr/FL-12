@@ -100,12 +100,12 @@ function redirectToPosts(e) {
         return response.json();
       })
       .then(posts => {
-        switchPage(id);
         posts.forEach(post => {
             readyPosts.push(post);
         })
       })
       .then(() => {
+        switchPage(id);
         readyPosts.forEach( readyPost => {
             const commentsBox = paintPost(readyPost);
             handleComments(readyPost, commentsBox);
