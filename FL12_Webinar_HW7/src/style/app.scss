@@ -1,0 +1,44 @@
+
+@import "variables";
+
+h1, h2 {
+    text-align: center;
+}
+section {
+    width: 600px;
+    margin: 0 auto;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+}
+#result p:nth-child(4n) {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    border-bottom: 1px solid $grey;
+}
+.spinner {
+    display: block;
+    margin: auto;   
+}
+.hidden {
+    display: none;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+.rock {
+    background-color: $blue;
+}
+.paper {
+    background-color: $red;
+}
+.scissors {
+    background-color: $green;
+}
+#reset {
+    background-color: $orange;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+}
