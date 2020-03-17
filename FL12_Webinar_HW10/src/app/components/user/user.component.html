@@ -1,0 +1,38 @@
+      <li class="user-line">
+        <div *ngIf="!editing; else editingTodo">
+          <p class="user-name">{{user.name}}</p>
+          <p class="user-country">{{user.email}}</p>
+          <p class="user-phone">{{user.phone}}</p>
+          <p class="modify"><button (click)="edit(user)">Edit</button><button (click)="deleted(user.id)">Delete</button></p>
+        </div>
+        <ng-template #editingTodo>
+            <form [formGroup] = "editForm" (ngSubmit)="edited()" class="add-form" [class.error]="!editForm.valid"> 
+              <input type="text" placeholder="name" formControlName="name"/>
+              <input type="text" placeholder="email" formControlName="email"/>
+              <input type="text" placeholder="phone" formControlName="phone"/>
+              
+              <button (click)="discardChanges()" type="button">Discard</button>
+              <button type="submit" [disabled]="!editForm.valid" [ngClass] = "{'valid' : editForm.valid}" >Save</button>
+            </form>
+          </ng-template>
+      </li>
+
+      
+      <!-- <li class="user-line">
+        <div *ngIf="!user.editing; else editingTodo">
+          <p class="user-name">{{ user.name }}</p>
+          <p class="user-country">{{ user.email }}</p>         
+          <p class="user-phone">{{ user.phone }}</p>
+          <p class="modify"><button (click)="editUser(user)">Edit</button><button (click)="deleted(user.id)">Delete</button></p>
+        </div> -->
+        <!-- <ng-template #editingTodo>
+          <form [formGroup] = "editForm" (ngSubmit)="saveEditedUser(user.id)" class="add-form" [class.error]="!editForm.valid"> 
+            <input type="text" placeholder="name" formControlName="name"/>
+            <input type="text" placeholder="email" formControlName="email"/>
+            <input type="text" placeholder="phone" formControlName="phone"/>
+            
+            <button (click)="discardChanges(user.id)" type="button">Discard</button>
+            <button type="submit" [disabled]="!editForm.valid" [ngClass] = "{'valid' : editForm.valid}" >Save</button>
+          </form>
+        </ng-template> -->
+      <!-- </li> -->
