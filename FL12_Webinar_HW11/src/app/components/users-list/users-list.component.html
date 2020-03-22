@@ -1,0 +1,15 @@
+<div class="container">
+    <input type="text" placeholder="Search" [(ngModel)]="searchedName" class="search">
+    <a class="add-btn" href="#" routerLink="/users/new">Add new user</a>
+</div>
+<div class="container">
+  <ul>
+      <user 
+      *ngFor="let user of usersList | userFilter:searchedName"
+      [user]="user"
+      (deleteUser) = "deleteUser($event)"
+      (editUser) = "saveEditedUser($event)"
+      >
+    </user>
+  </ul>
+  </div>  
