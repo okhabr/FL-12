@@ -1,0 +1,17 @@
+.highlight{ 
+    font-weight: 800;
+    color: red;
+}
+
+button {
+    padding: 10px;
+    margin: 20px;
+    background-color: rgb(241, 187, 7);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+button:hover{
+    cursor: pointer;
+}
